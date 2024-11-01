@@ -250,4 +250,30 @@
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
+<!--leaf remover link-->
+	<link name="leaf_remover_base_link">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+		<mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/> 
+		</geometry>
+	</visual>
+	<collision>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+		<mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/>
+		</geometry>
+	</collision>
+	<inertial>
+		<mass value="0.1"/>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+	</inertial>
+	</link>
+
+	<joint name="leaf_remover_joint" type="fixed">
+	<parent link="J6"/> 
+	<child link="leaf_remover_base_link"/>
+	<origin xyz="0 0 0" rpy="0 0 0"/> 
+	</joint>
 </robot>
