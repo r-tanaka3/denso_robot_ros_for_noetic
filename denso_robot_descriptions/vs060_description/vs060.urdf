@@ -304,12 +304,14 @@
 	<joint name="leaf_remover_joint_1" type="fixed">
 		<parent link="leaf_remover_base_link"/> 
 		<child link="leaf_remover_first_link"/>
-		<origin xyz="0.0 0.04385 0.125" rpy="0 30 0"/> <!--z: half the length of the base link-->
+		<!--<origin xyz="0.0 0.04385 0.125" rpy="0 30 0"/> -->
+		<origin xyz="0.0 0.04385 0.125" rpy="0 0 0"/> <!--z: half the length of the base link-->
 	</joint>
 
 	<link name="leaf_remover_second_link">
 	<visual>
-		<origin xyz="-0.02 -0.088 -0.014" rpy="0 0 220"/>
+		<origin xyz="-0.02 -0.088 -0.014" rpy="0 0 0"/>
+		<!--<origin xyz="-0.02 -0.088 -0.014" rpy="0 0 220"/>-->
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/--> 
 		<box size="0.04 0.196 0.028"/>
