@@ -253,14 +253,14 @@
 <!--leaf remover link-->
 	<link name="leaf_remover_base_link">
 	<visual>
-		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<origin xyz="0 0 -0.125" rpy="0 0 0"/>
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/--> 
 		<box size="0.04 0.0587 0.25"/><!--z: length of the base link-->
 		</geometry>
 	</visual>
 	<collision>
-		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<origin xyz="0 0 -0.125" rpy="0 0 0"/>
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/-->
 		<box size="0.04 0.0587 0.25"/>
@@ -276,19 +276,19 @@
 	<joint name="leaf_remover_joint" type="fixed">
 		<parent link="J6"/> 
 		<child link="leaf_remover_base_link"/>
-		<origin xyz="0 0 0.125" rpy="0 0 0"/> 
+		<origin xyz="0 0 0.25" rpy="0 0 0"/> 
 	</joint>
 
 	<link name="leaf_remover_first_link">
 	<visual>
-		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<origin xyz="0 -0.0145 0" rpy="0 0 0"/>
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/--> 
 		<box size="0.04 0.029 0.028"/>
 		</geometry>
 	</visual>
 	<collision>
-		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<origin xyz="0 -0.0145 0" rpy="0 0 0"/>
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/-->
 		<box size="0.04 0.029 0.028"/>
@@ -305,12 +305,12 @@
 		<parent link="leaf_remover_base_link"/> 
 		<child link="leaf_remover_first_link"/>
 		<!--<origin xyz="0.0 0.04385 0.125" rpy="0 30 0"/> -->
-		<origin xyz="0.0 0.04385 0.125" rpy="0 0 0"/> <!--z: half the length of the base link-->
+		<origin xyz="0.0 0.05835 0.0  " rpy="0 0 0"/> 
 	</joint>
 
 	<link name="leaf_remover_second_link">
 	<visual>
-		<origin xyz="-0.02 -0.088 -0.014" rpy="0 0 0"/>
+		<origin xyz="0.0 -0.098 0.0" rpy="0 0 0"/>
 		<!--<origin xyz="-0.02 -0.088 -0.014" rpy="0 0 220"/>-->
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/--> 
@@ -334,7 +334,8 @@
 	<joint name="leaf_remover_joint_2" type="fixed">
 		<parent link="leaf_remover_first_link"/> 
 		<child link="leaf_remover_second_link"/>
-		<origin xyz="0.0 0.1025 0.0" rpy="0 0 0"/> <!--z: half the length of the base link-->
+		<!--<origin xyz="0.0 0.1025 0.0" rpy="0 0 0"/>-->
+		<origin xyz="0.0 0.196 0.0" rpy="0 0 0"/>
 	</joint>
 
 </robot>
