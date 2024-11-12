@@ -250,20 +250,20 @@
 			<mechanicalReduction>1</mechanicalReduction>
 		</actuator>
 	</transmission>
+
 <!--leaf remover link-->
 	<link name="leaf_remover_base_link">
 	<visual>
-		<origin xyz="0 0 -0.175" rpy="0 0 0"/>
+		<origin xyz="0 0.03285 -0.0025" rpy="0 0 0"/>
 		<geometry>
-		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/--> 
-		<box size="0.04 0.0587 0.35"/><!--z: length of the base link-->
+		<box size="0.04 0.1057 0.005"/>
 		</geometry>
 	</visual>
 	<collision>
-		<origin xyz="0 0 -0.175" rpy="0 0 0"/>
+		<origin xyz="0 0 -0.0025" rpy="0 0 0"/>
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/-->
-		<box size="0.04 0.0587 0.35"/>
+		<box size="0.04 0.1057 0.35"/>
 		</geometry>
 	</collision>
 	<inertial>
@@ -273,25 +273,53 @@
 	</inertial>
 	</link>
 
-	<joint name="leaf_remover_joint" type="fixed">
+	<joint name="leaf_remover_joint_1" type="fixed">
 		<parent link="J6"/> 
 		<child link="leaf_remover_base_link"/>
-		<origin xyz="0 0 0.35" rpy="0 0 0"/> 
+		<origin xyz="0 -0.047 0.005" rpy="0 0 0"/> 
 	</joint>
-
+	
 	<link name="leaf_remover_first_link">
 	<visual>
-		<origin xyz="0 -0.0145 0" rpy="0 0 0"/>
+		<origin xyz="0 0 -0.1725" rpy="0 0 0"/>
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/--> 
-		<box size="0.04 0.029 0.028"/>
+		<box size="0.04 0.04 0.345"/><!--z: length of the first link minus 0.005-->
 		</geometry>
 	</visual>
 	<collision>
-		<origin xyz="0 -0.0145 0" rpy="0 0 0"/>
+		<origin xyz="0 0 -0.1725" rpy="0 0 0"/>
 		<geometry>
 		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/-->
-		<box size="0.04 0.029 0.028"/>
+		<box size="0.04 0.04 0.345"/>
+		</geometry>
+	</collision>
+	<inertial>
+		<mass value="0.4"/>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+	</inertial>
+	</link>
+
+	<joint name="leaf_remover_joint_2" type="fixed">
+		<parent link="leaf_remover_base_link"/> 
+		<child link="leaf_remover_first_link"/>
+		<origin xyz="0 0 0.345" rpy="0 0 0"/> 
+	</joint>
+
+	<link name="leaf_remover_second_link">
+	<visual>
+		<origin xyz="0 -0.01035 0" rpy="0 0 0"/>
+		<geometry>
+		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/--> 
+		<box size="0.04 0.0207 0.028"/>
+		</geometry>
+	</visual>
+	<collision>
+		<origin xyz="0 -0.01035 0" rpy="0 0 0"/>
+		<geometry>
+		<!--mesh filename="package://denso_robot_descriptions/vs060_description/leaf_remover_model.STL" scale="0.001 0.001 0.001"/-->
+		<box size="0.04 0.0207 0.028"/>
 		</geometry>
 	</collision>
 	<inertial>
@@ -301,14 +329,15 @@
 	</inertial>
 	</link>
 
-	<joint name="leaf_remover_joint_1" type="fixed">
-		<parent link="leaf_remover_base_link"/> 
-		<child link="leaf_remover_first_link"/>
+	<joint name="leaf_remover_joint_3" type="fixed">
+		<parent link="leaf_remover_first_link"/> 
+		<child link="leaf_remover_second_link"/>
 		<!--<origin xyz="0.0 0.04385 0.125" rpy="0 30 0"/> -->
-		<origin xyz="0.0 0.05835 0.0  " rpy="0 0 0"/> 
+		<origin xyz="0.0 0.0407 0.0  " rpy="0 0 0"/> 
+		<!--<origin xyz="0.0 0.05835 0.0  " rpy="0 0 0"/> -->
 	</joint>
 
-	<link name="leaf_remover_second_link">
+	<link name="leaf_remover_third_link">
 	<visual>
 		<origin xyz="0.0 -0.098 0.0" rpy="0 0 0"/>
 		<!--<origin xyz="-0.02 -0.088 -0.014" rpy="0 0 220"/>-->
@@ -331,9 +360,9 @@
 	</inertial>
 	</link>
 
-	<joint name="leaf_remover_joint_2" type="fixed">
-		<parent link="leaf_remover_first_link"/> 
-		<child link="leaf_remover_second_link"/>
+	<joint name="leaf_remover_joint_4" type="fixed">
+		<parent link="leaf_remover_second_link"/> 
+		<child link="leaf_remover_third_link"/>
 		<!--<origin xyz="0.0 0.1025 0.0" rpy="0 0 0"/>-->
 		<origin xyz="0.0 0.196 0.0" rpy="0 0 0"/>
 	</joint>
