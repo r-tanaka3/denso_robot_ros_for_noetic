@@ -380,7 +380,7 @@
 	<joint name="camera_mount_joint" type="fixed">
 		<parent link="leaf_remover_base_link"/> 
 		<child link="camera_mount"/>
-		<origin xyz="0 0.2525 0.014" rpy="0 0 0"/> <!--y: distance from the center of the hand to the center of zed-->
+		<origin xyz="0 0.23 0.014" rpy="0 0 0"/> <!--y: distance from the center of the hand to the center of zed-->
 	</joint>
 
 </robot>
