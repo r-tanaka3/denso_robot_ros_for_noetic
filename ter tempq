@@ -1,0 +1,109 @@
+* [33m6ab4f3b[m[33m ([m[1;36mHEAD -> [m[1;32mtemp[m[33m)[m modified for grape robot
+* [33mc4e2568[m updated robot model
+* [33m8cb37d7[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m added zed to model
+* [33m3c200f1[m modifying model
+* [33m08dff54[m revised the model and start pose
+* [33mdedc740[m changed robot model
+* [33m75075f1[m added start pose
+* [33m987a831[m added leaf remover to the robot model
+* [33m80475e4[m adding leaf remover link
+* [33m8fd862d[m update README.md
+* [33me646d13[m 指令値生成遅延奮闘記
+* [33m901b043[m add comments
+* [33m9e2e23c[m ジョイントリミットを正しく設定。結構大事な作業かもしれない。
+* [33mc4d18fc[m update joint limits
+* [33m0cc84ee[m modify robot_name in vs060.launch.xml
+* [33ma41afc1[m add .gitignore
+* [33mb593ef4[m denso_robot_bringup/launch/vs060_bringup.launch をスッキリ
+* [33m2b3ac61[m fix the warning regarding to the default_planning_pipeline
+* [33mb56c775[m modified collada files by blender so that it can be loaded in noetic
+*   [33m2b6aea0[m Merge pull request #43 from k-okada/patch-1
+[32m|[m[33m\[m  
+[32m|[m * [33mdbd89e1[m add denso_robot_descriptions and robot_state_publisher to package.xml
+[32m|[m[32m/[m  
+* [33md854e94[m Add initialization to clear the STO state for RC9 and COBOTTA [v3.2.0]
+* [33ma0514ef[m Increment version 3.1.2 to make a pull request to https://github.com/ros/rosdistro
+* [33m0abffbb[m Fix the install section in CMakeLists.txt for build.ros.org failure.
+* [33m2881b8c[m Add the LICENSE file for https://github.com/ros/rosdistro/pull/28639
+* [33m38e5e0b[m Change the symbolic link to the directory of include/bcap_core
+* [33m8b74a3d[m Fixed #5 - Controller ABORTED
+* [33mca3fe54[m Upgrade denso_robot_ros. [v3.1.1]   - Add ros::spinOnce() to denso_robot_control for the callbacks.
+* [33m117302f[m Upgrade denso_robot_ros to ROS Melodic. [v3.1.0]   - Add supporting RC9   - Upgrade tinyxml2 to official v3.0.0 in denso_robot_core   - Change planning_adapters from AddTimeParameterization to AddTimeOptimalParameterization   - Remove 5-seconds-sleep in denso_robot_control::main()   - Fix MiniIO and HandIO in denso_robot_control   - Fix memory leak in bcap_core   ...
+* [33mbcb168c[m Add 3.0.4 release files.
+* [33m62b0253[m Add 3.0.3 releasae files.
+*   [33m72bb6f1[m Merge pull request #24 from DENSORobot/feature-fix-update_joint_limits
+[34m|[m[35m\[m  
+[34m|[m * [33mc89e784[m Change to insert spaces after colon.
+[34m|[m * [33m1ca7476[m Change to insert space after colon.
+[34m|[m[34m/[m  
+*   [33m77ef39b[m Merge pull request #15 from DENSORobot/modify_config
+[36m|[m[1;31m\[m  
+[36m|[m * [33m9725592[m Fix to get the current joint values.
+[36m|[m * [33m046e6c6[m Modify moveit config.
+[36m|[m[36m/[m  
+*   [33m3e674da[m Merge pull request #11 from YoshihiroMIYAKOSHI/master
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33m51dad0b[m Bug fix for issue9
+[1;32m|[m[1;32m/[m  
+*   [33m22db900[m Merge branch 'master' of https://github.com/DENSORobot/denso_robot_ros
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33m1bf0ee2[m Fix the symbolic link of bcap_core
+* [1;35m|[m [33md79d7d8[m Allow extended-joint motors to be controlled
+* [1;35m|[m [33m67b4ebf[m Allow extended-joint mortors to be controlled
+[1;35m|[m[1;35m/[m  
+*   [33m83fc24a[m Merge commit '0d4bf06cd9c0a05f02a5763be71de29f3ec657d8'
+[1;36m|[m[31m\[m  
+[1;36m|[m * [33m0d4bf06[m Squashed 'bcap_core/' changes from fad52e5..9c4a578
+* [31m|[m [33m71c8519[m Merge commit 'f401ff96458b592497df498be3fecd1c33b5f21f'
+[32m|[m[31m\[m[31m|[m 
+[32m|[m * [33mf401ff9[m Squashed 'bcap_core/' changes from 95e2481..fad52e5
+* [33m|[m [33mff8ec82[m Add removed files.
+* [33m|[m [33md930b4c[m Merge commit 'f2343b4a5f649302fabef7902aa08514bb823aa3'
+[34m|[m[33m\[m[33m|[m 
+[34m|[m * [33mf2343b4[m Squashed 'bcap_core/' changes from 85fbb90..95e2481
+* [35m|[m [33md91e5a7[m Add send_format and recv_format parameters
+* [35m|[m [33m9c74adb[m Change check robot function
+* [35m|[m [33me14b417[m Update CHANGELOG.rst
+* [35m|[m [33mb32fb26[m Update package version
+* [35m|[m [33m746926b[m Update CHANGELOG.rst
+* [35m|[m [33ma0fdcda[m Add clear error step before motor on
+* [35m|[m [33m3e55434[m Fix some bugs
+* [35m|[m [33me1e7bf5[m Add subscriber and publisher for io function
+* [35m|[m [33m9eeea19[m Remove new line from ROS_INFO,ROS_WARN,ROS_ERROR
+* [35m|[m [33mc6510e2[m Change descriptions and add url, author
+* [35m|[m [33mc3df469[m Add I/O function for denso_robot_control
+* [35m|[m [33me49620b[m Add I/O function for denso_robot_core
+* [35m|[m [33m6655f94[m Check the catkin_lint result
+* [35m|[m [33mc61e6b5[m Add 'bcap_core/' from commit '85fbb90df64384cd16a98685bee470ec1a0d6613'
+[36m|[m[35m\[m[35m|[m 
+[36m|[m * [33m85fbb90[m create release repository for ROS
+[36m|[m * [33maedee29[m add CHANGELOG.rst
+[36m|[m *   [33mdc84e12[m Merge branch 'master' of https://github.com/DENSORobot/denso_robot_common
+[36m|[m [1;32m|[m[1;33m\[m  
+[36m|[m [1;32m|[m * [33m7f48332[m replace bcap_core to symbolic link
+[36m|[m * [1;33m|[m [33m46597f9[m change version to 3.0.0
+[36m|[m [1;33m|[m[1;33m/[m  
+[36m|[m * [33m4c7b129[m first commit
+[36m|[m * [33m64d82d9[m Delete LICENSE
+[36m|[m * [33m22f3021[m Initial commit
+* [33m9d2a80f[m Remove bcap_core
+* [33m42e951f[m Replace bcap_core to symbolic link
+* [33mcf4acc5[m Change bcap_core to none submodule
+* [33m6d99df4[m Squash some minor build script issues.
+* [33m1406d11[m Adapt to catkin_make_isolated
+* [33mbad5c02[m Change to industrial_core's one
+* [33m5e44062[m Revert "Change ros repository to shadow fix"
+* [33mca68e32[m Change ros repository to shadow fix
+* [33md5fa6ff[m Add .travis.yaml
+* [33m159b171[m Remove joint_trajectory_action
+* [33mb0f218a[m Remove incorrect tag
+* [33m8efc2b1[m Remove jsk_version
+* [33m81dd2db[m create release repository for ROS
+* [33m3ce991b[m create release repository for ROS
+* [33m8438706[m update submodule
+* [33mc31b081[m add CHANGELOG.rst
+* [33m8bf908a[m update version to 3.0.0
+* [33m3efe118[m Revert "update version to 3.0.0"
+* [33m03f5dec[m update version to 3.0.0
+* [33m1a68e7c[m first commit
+* [33mbbc9cfe[m Initial commit
