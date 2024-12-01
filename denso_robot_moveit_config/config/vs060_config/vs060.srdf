@@ -59,6 +59,9 @@
 	<disable_collisions link1="leaf_remover_base_link" link2="leaf_remover_first_link" reason="Adjacent"/>
 	<disable_collisions link1="leaf_remover_first_link" link2="leaf_remover_second_link" reason="Adjacent"/>
 	<disable_collisions link1="leaf_remover_second_link" link2="leaf_remover_third_link" reason="Adjacent"/>
+	<disable_collisions link1="J1" link2="leaf_remover_base_link" reason="Never"/>
+	<disable_collisions link1="J2" link2="leaf_remover_base_link" reason="Never"/>
+	<disable_collisions link1="J3" link2="leaf_remover_base_link" reason="Never"/>
 	<disable_collisions link1="J4" link2="leaf_remover_base_link" reason="Never"/>
 	<disable_collisions link1="J5" link2="leaf_remover_base_link" reason="Never"/>
 </robot>
